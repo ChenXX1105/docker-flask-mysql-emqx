@@ -1,0 +1,32 @@
+name: myapp
+services:
+  db:
+    container_name: name_db
+    image: sha256:2b2d33586554c607687a2e3714c5d6d6d59d7a6aa6ee6496c98e8e0d71e2d4bb
+    ports:
+      - "3307:3306"
+    environment:
+      MYSQL_DATABASE: unicom
+      MYSQL_ROOT_PASSWORD: 1qaz2wsx
+    volumes:
+      - D:\docker_example\mysql\mydata:/var/lib/mysql
+      - D:\docker_example\mysql\myconf:/etc/mysql/conf.d
+    restart: always
+    networks:
+      - position_network
+
+  web:
+    container_name: name_web
+    image: sha256:8fa3880d190e701c0bfc565490ca355d9981ddbf5c1430476d1749bcfb063deb
+    ports:
+      - "5002:5002"
+    restart: always
+    networks:
+      - position_network
+    depends_on:
+      - db
+
+networks:
+  position_network:
+
+
