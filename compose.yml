@@ -9,8 +9,9 @@ services:
       MYSQL_DATABASE: unicom
       MYSQL_ROOT_PASSWORD: 1qaz2wsx
     volumes:
-      - D:\docker_example\mysql\mydata:/var/lib/mysql
-      - D:\docker_example\mysql\myconf:/etc/mysql/conf.d
+      //设置mydata和myconf的文件
+      # - D:\docker_example\mysql\mydata:/var/lib/mysql 
+      # - D:\docker_example\mysql\myconf:/etc/mysql/conf.d
     restart: always
     networks:
       - position_network
