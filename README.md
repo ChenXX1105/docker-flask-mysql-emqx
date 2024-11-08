@@ -9,4 +9,14 @@ docker pull crpi-rmc3vl74gfshbdna.cn-hangzhou.personal.cr.aliyuncs.com/mychanku/
 ### 创造compose
 1. 在compose.yml中设置MySQL文件地址
 2. 用`docker compose up -d启动服务
-3. 可以用sql文件创建数据
+3.
+   ```
+   docker exec -t name_web /bin/bash
+   pip install cryptography -i https://pypi.tuna.tsinghua.edu.cn/simple
+   apt-get update
+   apt-get install vim
+   cd /app
+   vim mysql.py
+   ##在host位置修改内网ip或服务器ip
+   ```
+5. 可以用sql文件创建数据
