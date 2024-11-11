@@ -1,22 +1,12 @@
-### 从阿里云拉取db和web的docker镜像
+### 从阿里云拉取docker镜像
+大小为1.9GB
+内置mysql,python3.8,vim,curl,pip,emqx
+拉取命令
 ```
-docker login --username=aliyun2870171523 crpi-rmc3vl74gfshbdna.cn-hangzhou.personal.cr.aliyuncs.com
-docker pull crpi-rmc3vl74gfshbdna.cn-hangzhou.personal.cr.aliyuncs.com/mychanku/flask:v1.0
-docker pull crpi-rmc3vl74gfshbdna.cn-hangzhou.personal.cr.aliyuncs.com/mychanku/chuan:v1.1
+docker pull crpi-rmc3vl74gfshbdna.cn-hangzhou.personal.cr.aliyuncs.com/mychanku/flask_emqx_mysql:v1.10
 ```
-5002端口为web进入端口
-3307端口为mysql进入端口
-### 创造compose
-1. 在compose.yml中设置MySQL文件地址
-2. 用`docker compose up -d启动服务
-3.
-   ```
-   docker exec -t name_web /bin/bash
-   pip install cryptography -i https://pypi.tuna.tsinghua.edu.cn/simple
-   apt-get update
-   apt-get install vim
-   cd /app
-   vim mysql.py
-   ##在host位置修改内网ip或服务器ip
-   ```
-5. 可以用sql文件创建数据
+8088端口为web进入端口
+3306端口为mysql进入端口
+1883端口为emqx端口
+18083端口为emqx后台端口
+mysql密码为1qaz2wsx
