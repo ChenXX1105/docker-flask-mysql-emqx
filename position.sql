@@ -1,3 +1,5 @@
+//示例数据
+
 insert into unicom.position (datatime, lat, lng, variation, speed) values ('2024-10-13 15:41:17', '26.060204079967', '119.19643229381', '0', '2.51');
 insert into unicom.position (datatime, lat, lng, variation, speed) values ('2024-10-13 15:41:18', '26.060240282187', '119.19641712619', '0', '2.849');
 insert into unicom.position (datatime, lat, lng, variation, speed) values ('2024-10-13 15:41:19', '26.060269002843', '119.19639427304', '0', '2.904');
